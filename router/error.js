@@ -15,6 +15,9 @@ module.exports = (...all) => {
   generic.error = async ctx => {
 
     // Only do this if the correct path
+    if(typeof ctx.error !== "object") {
+        ctx.error = Error(JSON.stringify(ctx.error));
+    }
     ctx.error.code = ctx.error.code || '';
     ctx.error.params = parsePath(ctx.error.code).params;
 
