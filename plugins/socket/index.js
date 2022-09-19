@@ -36,6 +36,9 @@ module.exports = {
     if (listeners.ping) {
       ctx.log.warning('socket("ping") has a special meaning, please avoid it');
     }
+    if (typeof ctx.options.socket.allowEIO3 !== "boolean") {
+      ctx.options.socket.allowEIO3 = true;
+    }
     ctx.io = socketIO(ctx.server, ctx.options.socket);
     ctx.io.on('connect', socket => {
       // Create a new context assigned to each connected socket

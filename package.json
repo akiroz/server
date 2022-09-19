@@ -1,6 +1,6 @@
 {
-  "name": "server",
-  "version": "1.0.37",
+  "name": "@akiroz/server",
+  "version": "1.1.0",
   "description": "A modern and powerful server for Node.js",
   "homepage": "https://serverjs.io/",
   "repository": "https://github.com/franciscop/server.git",
@@ -60,7 +60,7 @@
     "response-time": "^2.3.2",
     "serve-favicon": "^2.3.2",
     "serve-index": "^1.8.0",
-    "socket.io": "^2.0.3"
+    "socket.io": "^4.5.2"
   },
   "devDependencies": {
     "eslint": "^4.7.2",
